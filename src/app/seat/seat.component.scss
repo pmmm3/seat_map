@@ -1,8 +1,11 @@
-.svg-icon
+div
 {
-    width: 2em;
-    height: 2em;
-    vertical-align: middle;
-    fill: currentColor;
-    overflow: hidden;
+    padding: 1%;
+    width: fit-content;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    border-radius: 25px;
+    border: 1px dotted crimson;
 }

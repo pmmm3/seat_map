@@ -1,6 +1,13 @@
-<div class="example-boundary">
-    <app-seat class_State= {{estado}} class="example-box" cdkDragBoundary=".example-boundary" cdkDrag
-    (click)="seleccionar()"  ></app-seat>
+<div class="container-map">
+    <img src="/assets/plano.jpg" alt="">
+    <div>
+        <app-seat *ngFor="let seat of seats"
+                    class="seat-box" [seat]=seat
+                    cdkDrag cdkDragBoundary=".container-map"
+                    (cdkDragEnded)="droppedElement($event,seat)"></app-seat>
+    </div>
+
+
 </div>
 
 

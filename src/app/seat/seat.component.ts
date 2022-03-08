@@ -1,4 +1,5 @@
 import { Component, OnInit, Input} from '@angular/core';
+import { Seat } from '../models/seat';
 
 @Component({
   selector: 'app-seat',
@@ -6,22 +7,11 @@ import { Component, OnInit, Input} from '@angular/core';
   styleUrls: ['./seat.component.scss']
 })
 export class SeatComponent implements OnInit {
-  @Input() class_State: string = '';
-  seat_color: string = '';
+  @Input() seat! : Seat;
+  seat_color: string = 'grey';
   constructor() { }
 
   ngOnInit(): void {
-    if (this.class_State)
-    {
-      if (this.class_State == ('disabled'))
-      {
-        this.seat_color = 'grey';
-      }
-      else if (this.class_State == ('selected'))
-      {
-        this.seat_color = 'green';
-      }
-    }
   }
 
 }
